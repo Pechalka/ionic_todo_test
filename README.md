@@ -1,14 +1,12 @@
-ionic_todo_test
+todo list
 ===============
-###simple todo list.###
 
 use:
 
-  [ionicframework](http://ionicframework.com/) (frontend)
-  
-  [loopback](http://loopback.io/) (backend)
+[ionicframework](http://ionicframework.com/) (frontend)
+[loopback](http://loopback.io/) (backend)
 
-how to run:
+##how to run:##
 
     cd server
     npm install
