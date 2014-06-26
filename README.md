@@ -1,9 +1,7 @@
-todo list
-===============
-
-use:
+#todo list#
 
 [ionicframework](http://ionicframework.com/) (frontend)
+
 [loopback](http://loopback.io/) (backend)
 
 ##how to run:##
