@@ -1,0 +1,25 @@
+{
+  "db": {
+    "defaultForType": "db",
+    "connector": "memory"
+  },
+  "push": {
+    "defaultForType": "push",
+    "connector": "loopback-push-notification",
+    "installation": "installation",
+    "notification": "notification",
+    "application": "application"
+  },
+  "mail": {
+    "defaultForType": "mail",
+    "connector": "mail"
+  },
+  "mysql": {
+    "connector": "mysql",
+    "host" : "localhost",
+    "port" : 3306,
+    "database" : "test",
+    "username" : "root",
+    "password" : "123"
+  }
+}

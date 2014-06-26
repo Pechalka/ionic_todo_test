@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html land="eg" data-ng-app="TodoApp">
+<head>
+	<meta charset=utf-8>
+	<title>todo </title>
+
+	<!-- ionic -->
+	<link rel="stylesheet" type="text/css" href="lib/ionic/css/ionic.css">
+	<script type="text/javascript" src="lib/ionic/js/ionic.bundle.js"></script>
+
+	<!-- app -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="js/app.js"></script>
+
+</head>
+<body data-ng-controller="AppCtrl">
+	<ion-header-bar align-title="center" class="bar-positive">
+	<div class="buttons">
+	  	<button ng-click="toogleDelete()" class="button button-icon icon ion-ios7-minus-outline">
+		</button>
+		<h1 class="title">Todo</h1>
+		</div>
+	</ion-header-bar>
+	<ion-content>
+		<ion-refresher on-refresh="refresh()">
+		</ion-refresher>
+		<ion-list show-delete="shouldShowReorder" 
+		 can-swipe="shouldShowDone">
+		  <ion-item ng-repeat="todo in todos" >
+		    <h2 ng-class="{ 'completed' : todo.competed }">{{todo.title}}</h2> 
+		    <ion-delete-button class="ion-minus-circled"
+                ng-click="remove($index)">
+    		</ion-delete-button>
+
+    		<ion-option-button ng-if="!todo.competed" ng-click="done(todo)" class="button-energized">done</ion-option-button>
+    		<ion-option-button ng-if="todo.competed" ng-click="not_done(todo)" class="button-royal">not done</ion-option-button>
+
+    	  </ion-item>
+		</ion-list>
+		<div class="padding">
+			<input ng-model="todo.title" type="text" placeholder="todo title" />
+        	<button ng-click="add()" class="button button-block button-balanced">add</button>
+      	</div>
+	</ion-content>
+</body>
+</html>
